@@ -8,7 +8,7 @@ const conn = mysql.createConnection({
     database: 'fns_dbkoperasi'
 });
 
-conn,connect((err)=>{
+conn.connect((err)=>{
     if(err) throw err;
     console.log('Mysql terkoneksi');
 });
