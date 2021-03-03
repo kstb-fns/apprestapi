@@ -1,2 +1,2 @@
 # apprestapi
-kstb rest api
+Koperasi Bersatu Soko Tunggal REST api
