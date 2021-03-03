@@ -12,22 +12,22 @@ exports.index = function(req,res){
 exports.tampilsemuaanggota = function(req,res){
     connection.query('SELECT * FROM tbl_anggota', function(error, rows, fields){
         if(error){
-            connection.log(error);
+            console.log(error);
         }else{
-            response.ok(rows, res)
+            response.ok(rows, res);
         }
-    })
+    });
 };
 
 //Menampilkan filter Anggota Id 'id_anggota'
 exports.tampilanggotaperid = function(req,res){
-    let id = req.param.id;
-    connection.query('SELECT * FROM tbl_anggota WHERE id_anggota = ?', [id],
+    let id = req.params.id;
+    connection.query('SELECT * FROM tbl_anggota WHERE id_identitas = ?', [id] ,
         function(error, rows, fields){
-            if(error){
-                console.log(error);
-            }else{
-                response.ok(rows, res);
-            }
+        if(error){
+            console.log(error);
+        }else{
+            response.ok(rows, res);
+        }
     });
 };
